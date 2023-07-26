@@ -4,14 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- Tailwind and Daisy Ui -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@3.4.0/dist/full.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google font Lato -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+
+    <!-- Tailwind custom classes -->
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+                golapi: '#F85559',
+              }
+            }
+          }
+        }
+      </script>
+    <!-- custom styles -->
+    <style>
+        .fontlato{
+            font-family: 'Lato', sans-serif;
+        }
+    </style>
 </head>
-<body>
+<body class="fontlato">
     <head>
         <!-- Nav bar section -->
         <section class="">
-    <div class="navbar bg-base-100 flex space-x-40 justify-center bg-[#F85559] text-white rounded-[600px] mx-auto my-12 w-4/5 ">
+    <div class="navbar bg-base-100 flex space-x-40 justify-center bg-golapi text-white rounded-[600px] mx-auto my-12 w-4/5 ">
                 <div class="navbar-center flex">
                   <ul class="menu menu-horizontal px-1">
                     <li><a>Home</a></li>
@@ -40,11 +65,11 @@
           <!-- slider one -->
             <div id="slide1" class="carousel-item relative w-full bg-cover bg-center bg-no-repeat h-[450px] bg-blend-overlay" style="background-image: url(./images/banner1.png);">
               <div class="mx-auto my-auto">
-                <h1 class="text-white text-7xl text-center">Exotic tastes at your <br>doorstep
+                <h1 class="text-white text-7xl font-extrabold  text-center">Exotic tastes at your <br>doorstep
                 </h1>
-                <p class="text-white text-center pt-3">We supply highly quality organic products</p>
+                <p class="text-white text-center font-medium pt-3">We supply highly quality organic products</p>
                 <div class="flex justify-center my-5">
-                <button class="btn btn-neutral capitalize border-none bg-[#F85559]">Shop Now</button>
+                <button class="btn btn-neutral font-extrabold capitalize border-none bg-golapi">Shop Now</button>
             </div>
             </div>
               <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
@@ -56,11 +81,11 @@
           <!-- slider two -->
             <div id="slide2" class="carousel-item relative w-full bg-cover bg-center bg-no-repeat h-[450px] bg-blend-overlay" style="background-image: url(./images/banner2.png);">
               <div class="mx-auto my-auto">
-                <h1 class="text-white text-7xl text-center">Exotic tastes at your <br>doorstep
+                <h1 class="text-white text-7xl font-extrabold text-center">Exotic tastes at your <br>doorstep
                 </h1>
-                <p class="text-white text-center pt-3">We supply highly quality organic products</p>
+                <p class="text-white font-medium text-center pt-3">We supply highly quality organic products</p>
                 <div class="flex justify-center my-5">
-                <button class="btn btn-neutral capitalize border-none bg-[#F85559]">Shop Now</button>
+                <button class="btn btn-neutral font-extrabold capitalize border-none bg-golapi">Shop Now</button>
             </div>
             </div>
               <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
@@ -72,11 +97,11 @@
           <!-- slider three -->
             <div id="slide3" class="carousel-item relative w-full bg-cover bg-center bg-no-repeat h-[450px] bg-blend-overlay" style="background-image: url(./images/banner3.png);">
               <div class="mx-auto my-auto">
-                <h1 class="text-white text-7xl text-center">Exotic tastes at your <br>doorstep
+                <h1 class="text-white text-7xl font-extrabold  text-center">Exotic tastes at your <br>doorstep
                 </h1>
-                <p class="text-white text-center pt-3">We supply highly quality organic products</p>
+                <p class="text-white text-center font-medium pt-3">We supply highly quality organic products</p>
                 <div class="flex justify-center my-5">
-                <button class="btn btn-neutral capitalize border-none bg-[#F85559]">Shop Now</button>
+                <button class="btn btn-neutral font-extrabold capitalize border-none bg-golapi">Shop Now</button>
             </div>
             </div>
               <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
@@ -88,11 +113,11 @@
           <!-- slider four -->
             <div id="slide4" class="carousel-item relative w-full bg-cover bg-center bg-no-repeat h-[450px] bg-blend-overlay" style="background-image: url(./images/banner4.png);">
               <div class="mx-auto my-auto">
-                <h1 class="text-white text-7xl text-center">Exotic tastes at your <br>doorstep
+                <h1 class="text-white text-7xl font-extrabold  text-center">Exotic tastes at your <br>doorstep
                 </h1>
-                <p class="text-white text-center pt-3">We supply highly quality organic products</p>
+                <p class="text-white text-center font-medium pt-3">We supply highly quality organic products</p>
                 <div class="flex justify-center my-5">
-                <button class="btn btn-neutral capitalize border-none bg-[#F85559]">Shop Now</button>
+                <button class="btn btn-neutral font-extrabold capitalize border-none bg-golapi">Shop Now</button>
             </div>
             </div>
               <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
@@ -105,7 +130,148 @@
           </div>
         </section>
     </head>
-    <main></main>
+    <main>
+        <!-- Deal of the day section -->
+        <section class="w-4/5 mx-auto">
+            <!-- Deal of the section upper part -->
+            <div class="flex flex-col lg:flex-row space-x-0 lg:space-x-28 mt-56">
+                <!-- Deal of the section text -->
+                <div>
+                <h1 class="font-extrabold text-[#121212] text-4xl mb-6">Deal of the day</h1>
+                    <p class="text-sm font-medium">Contrary to popular belief, is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+                </div>
+                <!-- Deal of the section clock -->
+            <div class="grid grid-flow-col gap-5 text-center auto-cols-max mt-10 font-extrabold">
+                <div class="flex flex-col">
+                  <span class="countdown fontlato text-4xl">
+                    <span style="--value:15; margin-right: 8px;"></span>:
+                  </span>
+                  days
+                </div> 
+                <div class="flex flex-col">
+                  <span class="countdown fontlato text-4xl">
+                    <span style="--value:10; margin-right: 8px;"></span>:
+                  </span>
+                  hours
+                </div> 
+                <div class="flex flex-col">
+                  <span class="countdown fontlato text-4xl">
+                    <span style="--value:24; margin-right: 8px;"></span>:
+                  </span>
+                  min
+                </div> 
+                <div class="flex flex-col">
+                  <span class="countdown fontlato text-4xl">
+                    <span style="--value:2;"></span>
+                  </span>
+                  sec
+                </div>
+              </div>
+            </div>
+            <!-- Deal of the section cart part -->
+            <div class="my-10 flex flex-col lg:flex-row gap-6">
+                <!-- cart one -->
+                <div class="card w-96 bg-[#FFF] shadow-md cursor-pointer">
+                    <figure class="px-10 pt-10">
+                      <img src="./images/fruit6.png" alt="Shoes" class="rounded-xl" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                      <h2 class="card-title">12.90$ - 18.85$ </h2>
+                      <p> Apples</p>
+                      <div class="rating rating-half mt-3">
+                        <input type="radio" name="rating-10" class="rating-hidden" />
+                        <input type="radio" name="rating-10" class="bg-golapi mask mask-star-2 mask-half-1" />
+                        <input type="radio" name="rating-10" class="bg-golapi mask mask-star-2 mask-half-2" />
+                        <input type="radio" name="rating-10" class="bg-golapi mask mask-star-2 mask-half-1" checked />
+                        <input type="radio" name="rating-10" class="bg-golapi mask mask-star-2 mask-half-2" />
+                        <input type="radio" name="rating-10" class="bg-golapi mask mask-star-2 mask-half-1" />
+                        <input type="radio" name="rating-10" class="bg-golapi mask mask-star-2 mask-half-2" />
+                        <input type="radio" name="rating-10" class="bg-golapi mask mask-star-2 mask-half-1" />
+                        <input type="radio" name="rating-10" class="bg-golapi mask mask-star-2 mask-half-2" />
+                        <input type="radio" name="rating-10" class="bg-golapi mask mask-star-2 mask-half-1" />
+                        <input type="radio" name="rating-10" class="bg-golapi mask mask-star-2 mask-half-2" />
+                      </div>
+                      <a class="text-golapi mt-3"    href="">Details</a>
+                    </div>
+                  </div>
+                  <!-- cart two -->
+                <div class="card w-96 bg-[#FFF] shadow-md cursor-pointer">
+                    <figure class="px-10 pt-10">
+                      <img src="./images/fruit7.png" alt="Shoes" class="rounded-xl" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                      <h2 class="card-title">12.90$ - 18.85$ </h2>
+                      <p> Apples</p>
+                      <div class="rating rating-half mt-3">
+                        <input type="radio" name="rating-10" class="rating-hidden" />
+                        <input type="radio" name="rating-10" class="bg-golapi mask mask-star-2 mask-half-1" />
+                        <input type="radio" name="rating-10" class="bg-golapi mask mask-star-2 mask-half-2" />
+                        <input type="radio" name="rating-10" class="bg-golapi mask mask-star-2 mask-half-1" checked />
+                        <input type="radio" name="rating-10" class="bg-golapi mask mask-star-2 mask-half-2" />
+                        <input type="radio" name="rating-10" class="bg-golapi mask mask-star-2 mask-half-1" />
+                        <input type="radio" name="rating-10" class="bg-golapi mask mask-star-2 mask-half-2" />
+                        <input type="radio" name="rating-10" class="bg-golapi mask mask-star-2 mask-half-1" />
+                        <input type="radio" name="rating-10" class="bg-golapi mask mask-star-2 mask-half-2" />
+                        <input type="radio" name="rating-10" class="bg-golapi mask mask-star-2 mask-half-1" />
+                        <input type="radio" name="rating-10" class="bg-golapi mask mask-star-2 mask-half-2" />
+                      </div>
+                      <a class="text-golapi mt-3"    href="">Details</a>
+                    </div>
+                  </div>
+                  <!-- cart three -->
+                <div class="card w-96 bg-[#FFF] shadow-md cursor-pointer">
+                    <figure class="px-10 pt-10">
+                      <img src="./images/fruit8.png" alt="Shoes" class="rounded-xl" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                      <h2 class="card-title">12.90$ - 18.85$ </h2>
+                      <p> Apples</p>
+                      <div class="rating rating-half mt-3">
+                        <input type="radio" name="rating-10" class="rating-hidden" />
+                        <input type="radio" name="rating-10" class="bg-golapi mask mask-star-2 mask-half-1" />
+                        <input type="radio" name="rating-10" class="bg-golapi mask mask-star-2 mask-half-2" />
+                        <input type="radio" name="rating-10" class="bg-golapi mask mask-star-2 mask-half-1" checked />
+                        <input type="radio" name="rating-10" class="bg-golapi mask mask-star-2 mask-half-2" />
+                        <input type="radio" name="rating-10" class="bg-golapi mask mask-star-2 mask-half-1" />
+                        <input type="radio" name="rating-10" class="bg-golapi mask mask-star-2 mask-half-2" />
+                        <input type="radio" name="rating-10" class="bg-golapi mask mask-star-2 mask-half-1" />
+                        <input type="radio" name="rating-10" class="bg-golapi mask mask-star-2 mask-half-2" />
+                        <input type="radio" name="rating-10" class="bg-golapi mask mask-star-2 mask-half-1" />
+                        <input type="radio" name="rating-10" class="bg-golapi mask mask-star-2 mask-half-2" />
+                      </div>
+                      <a class="text-golapi mt-3"    href="">Details</a>
+                    </div>
+                  </div>
+                  <!-- cart four -->
+                <div class="card w-96 bg-[#FFF] shadow-md cursor-pointer">
+                    <figure class="px-10 pt-10">
+                      <img src="./images/fruit9.png" alt="Shoes" class="rounded-xl" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                      <h2 class="card-title">12.90$ - 18.85$ </h2>
+                      <p> Apples</p>
+                      <div class="rating rating-half mt-3">
+                        <input type="radio" name="rating-10" class="rating-hidden" />
+                        <input type="radio" name="rating-10" class="bg-golapi mask mask-star-2 mask-half-1" />
+                        <input type="radio" name="rating-10" class="bg-golapi mask mask-star-2 mask-half-2" />
+                        <input type="radio" name="rating-10" class="bg-golapi mask mask-star-2 mask-half-1" checked />
+                        <input type="radio" name="rating-10" class="bg-golapi mask mask-star-2 mask-half-2" />
+                        <input type="radio" name="rating-10" class="bg-golapi mask mask-star-2 mask-half-1" />
+                        <input type="radio" name="rating-10" class="bg-golapi mask mask-star-2 mask-half-2" />
+                        <input type="radio" name="rating-10" class="bg-golapi mask mask-star-2 mask-half-1" />
+                        <input type="radio" name="rating-10" class="bg-golapi mask mask-star-2 mask-half-2" />
+                        <input type="radio" name="rating-10" class="bg-golapi mask mask-star-2 mask-half-1" />
+                        <input type="radio" name="rating-10" class="bg-golapi mask mask-star-2 mask-half-2" />
+                      </div>
+                      <a class="text-golapi mt-3"    href="">Details</a>
+                    </div>
+                  </div>
+            </div>
+            <div class="flex justify-center my-5">
+                <button class="btn btn-neutral font-extrabold capitalize border-none bg-golapi">Shop All</button>
+            </div>
+        </section>
+    </main>
     <footer></footer>
 </body>
 </html>
